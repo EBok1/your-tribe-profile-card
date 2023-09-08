@@ -32,6 +32,7 @@ h1 {
   width: 70%;
 }
 
+/**/
 h2 {
   font-family:"Gill Sans", sans-serif;
   font-size: 1rem;
@@ -43,6 +44,7 @@ h2 {
   margin-bottom: 0;
 }
 
+/*tekst rechter zijde van kaart*/ 
 h3{
   font-family:"Gill Sans", sans-serif;
   font-size: 1rem;
@@ -58,7 +60,7 @@ h3{
 
 article {
 	position:relative;
-	height:clamp(23em, 50vw, 30em);
+	height:clamp(23em, 50vw, 30em); /* zorgt ervoor dat kaart niet grooter en kleiner wordt dan aangegeven maat */
 	aspect-ratio: 2/3;
 	background:white;
 	
@@ -68,7 +70,7 @@ article {
 
 
 article > section {
-	position:absolute;
+	position:absolute; /* zorgt dat alle article sections over elkaar komen te staan*/ 
 	top: 0;
 	left:0;
 	
@@ -90,6 +92,7 @@ article > section:nth-of-type(3) {
   transform-style: preserve-3d;
 }
 
+/* wanneer je over section 3 heen gaat met je muis klapt kaart open */ 
 article:hover > section:nth-of-type(3) {
 	transition-delay:0s;
 	transform:rotateY(-180deg);
@@ -119,6 +122,8 @@ article > section:nth-of-type(3) section:nth-of-type(2){
 /*link button*/ 
 article > section:nth-of-type(3) img:hover {
   background-color: #84CCE2;
+  scale: 1.2;
+  transition: 500ms;
 }
 /* om button een plek te geven*/ 
 .name {
@@ -131,11 +136,10 @@ article > section:nth-of-type(3) img:hover {
 }
 
 /*
-.name.hover{
-  transition: 500ms;
-  scale: 1.5;
-}
-*/ 
+.name.hover {
+  width:60px;
+  height:60px;
+}*/
 
 
 
@@ -146,6 +150,8 @@ article > section:nth-of-type(2) {
   transform-style: preserve-3d;
 }
 
+/* wanneer je over section 2 heen gaat met je muis klapt 
+rechterkant van de kaart 1sec later open dan linker kant */ 
 article:hover > section:nth-of-type(2) {
 	transform:rotateY(180deg);
 	transition-delay:1s;
