@@ -1,11 +1,58 @@
 body {
-	background-image: url(https://i.pinimg.com/564x/68/a3/21/68a321d701d8988a3d636d979c47aa44.jpg);
+	background-image: url(https://i.pinimg.com/564x/c5/b8/3e/c5b83eafa630e9836080368d7d4e1367.jpg);
 	background-size: 100%;
 
 	height:100vh;
   /* om elementen in het midden te zetten */
 	display:grid;
 	place-content:center;
+  align-items:center; 
+}
+
+/* om foto in het midden te plaatsen */ 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 70%;
+
+}
+
+/* title/name */
+h1 {
+  font-family:"Gill Sans", sans-serif;
+  font-size: 1.6rem;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  width: 70%;
+}
+
+h2 {
+  font-family:"Gill Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3{
+  font-family:"Gill Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  
 }
 
 
@@ -16,7 +63,9 @@ article {
 	background:white;
 	
 	perspective:100em;
+  
 }
+
 
 article > section {
 	position:absolute;
@@ -26,9 +75,12 @@ article > section {
 	width:100%;
 	height:100%;
 	
-	background:linear-gradient(0deg, rgb(3, 180, 130) 40%, #02715b 100%);
+	background:#F89BAE;
 
 }
+
+
+
 /* section 3*/
 article > section:nth-of-type(3) {
 	transition-duration:1s;
@@ -41,7 +93,7 @@ article > section:nth-of-type(3) {
 article:hover > section:nth-of-type(3) {
 	transition-delay:0s;
 	transform:rotateY(-180deg);
-  
+  border-radius: 30rem;
 }
 
 /*front section 3*/
@@ -55,13 +107,37 @@ article > section:nth-of-type(3) section{
   background-image: url(https://i.pinimg.com/564x/5a/f7/aa/5af7aa11b5e56b26d7c2fc7614c6b7f0.jpg);
   background-size: 100%;
   backface-visibility: hidden;
+  
 }
 
 /*back section 3*/
 article > section:nth-of-type(3) section:nth-of-type(2){
-  background: rgb(106, 62, 194);
+  background: #F5C92A;
   transform: rotateY(180deg);
 }
+
+/*link button*/ 
+article > section:nth-of-type(3) img:hover {
+  background-color: #84CCE2;
+}
+/* om button een plek te geven*/ 
+.name {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+  width: 70%;
+  transition: 500ms;
+}
+
+/*
+.name.hover{
+  transition: 500ms;
+  scale: 1.5;
+}
+*/ 
+
+
 
 /* section 2*/
 article > section:nth-of-type(2) {
@@ -71,7 +147,6 @@ article > section:nth-of-type(2) {
 }
 
 article:hover > section:nth-of-type(2) {
-	
 	transform:rotateY(180deg);
 	transition-delay:1s;
 }
@@ -84,12 +159,14 @@ article > section:nth-of-type(2) section{
 
   width:100%;
 	height:100%;
-  background: white;
+  background:#84CCE2;
   backface-visibility: hidden;
 }
 
 /*back section 2*/
 article > section:nth-of-type(2) section:nth-of-type(2){
-  background: white;
+  background:#0A8570;
   transform: rotateY(180deg);
 }
+
+
